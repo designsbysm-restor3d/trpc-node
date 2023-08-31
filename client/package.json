@@ -1,0 +1,15 @@
+{
+  "name": "client",
+  "version": "10.29.1",
+  "private": true,
+  "scripts": {
+    "check:types": "tsc --noEmit",
+    "start": "tsx watch ."
+  },
+  "dependencies": {
+    "@trpc/client": "^10.29.1",
+    "tsx": "^3.12.7",
+    "typescript": "^5.1.0",
+    "undici": "^5.14.0"
+  }
+}

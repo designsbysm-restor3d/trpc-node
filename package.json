@@ -1,0 +1,27 @@
+{
+  "name": "root",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "dev:client": "wait-port 3000 && yarn workspace client start",
+    "dev:server": "yarn workspace server start",
+    "start": "run-p dev:* --print-label",
+    "types:client": "yarn workspace client check:types",
+    "types:server": "yarn workspace server check:types",
+    "check:types": "run-s types:* --print-label"
+  },
+  "workspaces": [
+    "client",
+    "server"
+  ],
+  "devDependencies": {
+    "@rushstack/eslint-patch": "^1.2.0",
+    "@types/node": "^18.16.16",
+    "@typescript-eslint/eslint-plugin": "^5.60.0",
+    "@typescript-eslint/parser": "^5.60.0",
+    "eslint": "^8.43.0",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.8.8",
+    "wait-port": "^1.0.4"
+  }
+}

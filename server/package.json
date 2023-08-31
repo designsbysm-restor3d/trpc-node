@@ -1,0 +1,21 @@
+{
+  "name": "server",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "check:types": "tsc --noEmit",
+    "start": "tsx watch ."
+  },
+  "dependencies": {
+    "@trpc/server": "^10.29.1",
+    "cors": "^2.8.5",
+    "jwt-decode": "^3.1.2",
+    "utility-types": "^3.10.0",
+    "zod": "^3.0.0"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.13",
+    "tsx": "^3.12.7",
+    "typescript": "^5.1.0"
+  }
+}
