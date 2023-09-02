@@ -1,27 +1,23 @@
-export type User = {
-  id: number;
-  firstName: string;
-  password: string;
-};
+import type { Patient } from './types/patient';
 
-const users: User[] = [];
+const patients: Patient[] = [];
 
 const db = {
-  user: {
+  patient: {
     create: async (data: { firstName: string }) => {
-      const user = {
+      const patient = {
         ...data,
-        id: users.length + 1,
+        id: patients.length + 1,
         password: String(Math.floor(Math.random() * 1000000)),
       };
-      users.push(user);
+      patients.push(patient);
 
-      return user;
+      return patient;
     },
 
-    findById: async (id: number) => users.find((user) => user.id === id),
+    findById: async (id: number) => patients.find((patient) => patient.id === id),
 
-    findMany: async () => users,
+    findMany: async () => patients,
   },
 };
 

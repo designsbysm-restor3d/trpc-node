@@ -2,16 +2,16 @@ import { z } from 'zod';
 
 import db from '../../db';
 import { publicProcedure, router } from '../../trpc';
-import { userID } from './types';
+import { idSchema } from '../../types/patient';
 
 const r = router({
   create: publicProcedure
     .input(z.object({ firstName: z.string() }))
-    .output(userID)
+    .output(idSchema)
     .mutation(async ({ input, ctx }) => {
       console.log('publicProcedure context user:', ctx.user);
 
-      return await db.user.create(input);
+      return await db.patient.create(input);
     }),
 });
 

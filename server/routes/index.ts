@@ -1,9 +1,9 @@
 import { publicProcedure, router } from '../trpc';
-import userRouter from './users';
+import patientsRouter from './patients';
 
 const indexRouter = router({
   healthCheck: publicProcedure.query(async () => true),
-  users: userRouter, // nested router
+  patients: patientsRouter, // nested router
 });
 
 export default indexRouter;

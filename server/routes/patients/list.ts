@@ -1,13 +1,13 @@
 import db from '../../db';
 import { protectedProcedure } from '../../middleware/authJWT';
 import { router } from '../../trpc';
-import { userListResponse } from './types';
+import { listResponseSchema } from '../../types/patient';
 
 const r = router({
-  list: protectedProcedure.output(userListResponse).query(async ({ ctx }) => {
+  list: protectedProcedure.output(listResponseSchema).query(async ({ ctx }) => {
     console.log('protectedProcedure context user:', ctx.user);
 
-    return await db.user.findMany();
+    return await db.patient.findMany();
   }),
 });
 
