@@ -1,0 +1,7 @@
+{
+  "recommendations": [
+    "mxsdev.typescript-explorer",
+    "orta.vscode-twoslash-queries",
+    "yoavbls.pretty-ts-errors"
+  ]
+}

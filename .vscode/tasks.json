@@ -1,0 +1,22 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "check types",
+      "type": "shell",
+      "command": "./node_modules/.bin/tsc",
+      "args": ["--watch", "--noEmit"],
+      "isBackground": true,
+      "presentation": {
+        "reveal": "never",
+        "echo": false,
+        "focus": false,
+        "panel": "dedicated"
+      },
+      "problemMatcher": "$tsc-watch",
+      "runOptions": {
+        "runOn": "folderOpen"
+      }
+    }
+  ]
+}
